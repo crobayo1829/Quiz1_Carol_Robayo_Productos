@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.ejemplo</groupId>
+    <groupId>co.javeriana</groupId>
     <artifactId>productos-app</artifactId>
     <version>1.0.0</version>
     <name>productos-app</name>
