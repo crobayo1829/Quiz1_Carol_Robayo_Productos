@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Productos</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+
+    <h1>Listado de Productos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${productos}">
+                <td th:text="${producto.nombre}">Nombre</td>
+                <td th:text="${#numbers.formatDecimal(producto.precio, 0, 'POINT', 0, 'NONE')}">Precio</td>
+                <td th:text="${producto.categoria}">Categoría</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
